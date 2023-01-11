@@ -9,8 +9,8 @@ Dart[]d=new Dart[12];
 void setup()
 {
   size(400,500);
-  question3();                //create scores randomly
-  question4();                //assign scores to box
+  scoring();                //create scores randomly
+  scoringboard();           //assign scores to box
   noLoop();
 }
 
@@ -30,7 +30,7 @@ void draw()
  result();               
 }
 
-void question3()
+void scoring()
 {
   for(int i=0;i<score.length;i++){
    scoreIndex.append(i);
@@ -38,7 +38,7 @@ void question3()
   scoreIndex.shuffle();
 }
 
-void question4()
+void scoringboard()
 {
   for(int i=0;i<8;i++)
     for(int j=0;j<8;j++){
@@ -58,7 +58,7 @@ void board()          //draw dartboard
       text(arr[i][j],i*50+25,j*50+15);
     }}
 
-void mouseClicked()    //question 5 reset when mouseClicked
+void mouseClicked()    //reset when mouseClicked
 {
   playScore1=0;
   playScore2=0;
